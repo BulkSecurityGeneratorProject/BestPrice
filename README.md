@@ -1,5 +1,3 @@
-# README #
+# BEST PRICE FOR ANY CAR #
 
-This is a spring boot application. To run this, assuming you have the pre-reqs, type 
-
-mvn spring-boot:run
+This is a spring boot web application delivering an Angular.JS application to the browser.
