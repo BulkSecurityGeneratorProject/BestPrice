@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "bestprice",
+    "packageName": "com.aka.bestprice",
+    "packageFolder": "com/aka/bestprice",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "085ffe850a4b8e3b95e9361ce8ec132d65a9e8da"
+  }
+}

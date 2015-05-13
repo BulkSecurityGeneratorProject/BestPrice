@@ -1,0 +1,18 @@
+{
+    "bestpriceApp": {
+        "buyer" : {
+            "home": {
+                "title": "Buyers",
+                "createLabel": "Create a new Buyer",
+                "createOrEditLabel": "Create or edit a Buyer"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Buyer {{ id }}?"
+            },
+            "detail": {
+                "title": "Buyer"
+            },
+            "name": "Name"
+        }
+    }
+}

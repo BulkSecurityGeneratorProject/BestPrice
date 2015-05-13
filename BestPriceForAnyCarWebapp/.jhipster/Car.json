@@ -1,0 +1,69 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "vrn",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Vrn",
+            "fieldNameUnderscored": "vrn",
+            "fieldInJavaBeanMethod": "Vrn",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "make",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Make",
+            "fieldNameUnderscored": "make",
+            "fieldInJavaBeanMethod": "Make",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "model",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Model",
+            "fieldNameUnderscored": "model",
+            "fieldInJavaBeanMethod": "Model",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "colour",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Colour",
+            "fieldNameUnderscored": "colour",
+            "fieldInJavaBeanMethod": "Colour",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "miles",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Miles",
+            "fieldNameUnderscored": "miles",
+            "fieldInJavaBeanMethod": "Miles",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "age",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Age",
+            "fieldNameUnderscored": "age",
+            "fieldInJavaBeanMethod": "Age",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150511222605",
+    "pagination": "infinite-scroll",
+    "validation": false
+}

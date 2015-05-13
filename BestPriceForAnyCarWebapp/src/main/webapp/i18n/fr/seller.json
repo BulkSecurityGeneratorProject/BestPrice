@@ -1,0 +1,21 @@
+{
+    "bestpriceApp": {
+        "seller" : {
+            "home": {
+                "title": "Sellers",
+                "createLabel": "Créer un nouveau Seller",
+                "createOrEditLabel": "Créer ou éditer un Seller"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Seller {{ id }} ?"
+            },
+            "detail": {
+                "title": "Seller"
+            },
+            "name": "Name",
+            "city": "City",
+            "postcode": "Postcode"
+        }
+    }
+}
+

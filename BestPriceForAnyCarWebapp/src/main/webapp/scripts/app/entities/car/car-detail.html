@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="bestpriceApp.car.detail.title">Car</span> {{car.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.vrn">Vrn</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.vrn}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.make">Make</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.make}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.model">Model</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.model}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.colour">Colour</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.colour}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.miles">Miles</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.miles}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="bestpriceApp.car.age">Age</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{car.age}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="car"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

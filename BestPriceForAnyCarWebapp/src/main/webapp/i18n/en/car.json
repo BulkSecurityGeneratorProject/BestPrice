@@ -1,0 +1,23 @@
+{
+    "bestpriceApp": {
+        "car" : {
+            "home": {
+                "title": "Cars",
+                "createLabel": "Create a new Car",
+                "createOrEditLabel": "Create or edit a Car"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Car {{ id }}?"
+            },
+            "detail": {
+                "title": "Car"
+            },
+            "vrn": "Vrn",
+            "make": "Make",
+            "model": "Model",
+            "colour": "Colour",
+            "miles": "Miles",
+            "age": "Age"
+        }
+    }
+}
