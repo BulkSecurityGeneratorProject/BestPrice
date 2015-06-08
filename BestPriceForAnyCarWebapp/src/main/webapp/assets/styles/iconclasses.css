@@ -1,0 +1,27 @@
+.tick32x32
+{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 32px;
+    width: 32px;
+    display: block;
+    background-image: url(../images/icons/32x32/check.png);
+}
+.loading24x24
+{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../images/icons/24x24/loading.gif);
+}
+.loading64x64
+{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 64px;
+    width: 64px;
+    display: block;
+    background-image: url(../images/icons/64x64/loading.gif);
+}

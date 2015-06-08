@@ -1,3 +1,6 @@
+@import "fonts.css";
+@import "iconclasses.css";
+
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -69,9 +72,9 @@ Browser Upgrade Prompt
 
 .hipster {
     display: inline-block;
-    width: 347px;
-    height: 497px;
-    background: url("../images/hipster.png") no-repeat center top;
+    width: 381px;
+    height: 259px;
+    background: url("../images/home_illus_1.png") no-repeat center top;
     background-size: contain;
 }
 
@@ -84,7 +87,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .hipster {
-        background: url("../images/hipster2x.png") no-repeat center top;
+        background: url("../images/home_illus_1.png") no-repeat center top;
         background-size: contain;
     }
 }
@@ -145,3 +148,105 @@ ul#strength {
     width:20px;
 }
 /* end Password strength bar style */
+
+
+.well
+{
+    background-color: #ffffff;
+}
+.development
+{
+    background-image: none;
+}
+.search-div
+{
+    height: 200px;
+    margin-bottom: 20px;
+}
+.search-input
+{
+    background-image: url("../images/number_plate_bg.png");
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 350px;
+    border: none;
+    padding: 5px 5px 5px 5px;
+}
+
+.search-result
+{
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-result div
+{
+    float: left;
+}
+.search-result .search-result-image
+{
+
+}
+
+.search-result .search-result-details
+{
+    padding: 10px 10px 10px 10px;
+}
+
+.search-result .search-result-control
+{
+    padding-top:10%;
+    padding-bottom:10%;
+}
+
+
+.reg-number-input
+{
+    margin-top:6px;
+
+    height: 50px;
+    width: 290px;
+    text-align: center;
+    font-size: 56px;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+
+    display:block;
+    font-family: 'uknumberplateregular';
+    line-height: 30px;
+    padding-top: 0px;
+    outline: none;
+}
+
+
+
+.vrnResultAvailableCheckmark
+{
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+.responsive-desktop
+{
+    display: none;
+}
+
+@media only screen
+and (min-width: 995px) {
+    .responsive-desktop
+    {
+        display: block;
+    }
+    .responsive-mobile
+    {
+        display: none;
+    }
+}
+
+.loadingindicator
+{
+    padding: 20px 20px 20px 20px;
+}
