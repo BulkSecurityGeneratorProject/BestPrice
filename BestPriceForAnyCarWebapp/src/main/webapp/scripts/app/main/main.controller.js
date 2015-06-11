@@ -50,4 +50,27 @@ angular.module('bestpriceApp')
 
         };
 
+
+
+
+
+        $scope.enterValidation = function(){
+            return true;
+        };
+
+        $scope.exitValidation = function(){
+            return true;
+        };
+//example using context object
+        $scope.exitValidation = function(context){
+            return context.firstName === "James";
+        }
+//example using promises
+        $scope.exitValidation = function(){
+            var d = $q.defer()
+            $timeout(function(){
+                return d.resolve(true);
+            }, 2000);
+            return d.promise;
+        }
     });
