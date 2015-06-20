@@ -41,8 +41,8 @@
 
 
 
-            <h1 translate="main.title">Welcome, Java Hipster!</h1>
-            <p class="lead" translate="main.subtitle">This is your homepage</p>
+            <h1 translate="main.title">Welcome</h1>
+            <p class="lead" translate="main.subtitle">This is BestPriceForYourCar.com</p>
 
 
             <div class="search-div">
@@ -60,23 +60,25 @@
 
                     <div class="wizard">
                         <wizard on-finish="finishedWizard()">
-                            <wz-step title="Enter VRN">
+                            <wz-step title="Your Car">
 
 
                                 <div class="wizardcontainer">
 
 
-                                    <div class="search-result-control">
-                                        <input type="submit" wz-next value="CONTINUE" />
-                                    </div>
-
                                     <div class="search-result-details">
                                         <i>Your Car:</i>
+                                        <br />   <br />
                                         <b>BMW 530i SE</b><br />
-                                        60,000 Miles<br />
                                         Metallic Silver<br />
                                         Sept 2005<br />
                                     </div>
+
+
+                                    <div class="search-result-control" >
+                                        <input type="submit" wz-next value="CONTINUE" />
+                                    </div>
+
                                 </div>
 
 
@@ -85,23 +87,68 @@
 
 
                                 <div class="wizardcontainer">
-                                    <div class="search-result-control">
+
+
+                                    <div class="controls">
+                                        <div class="slider">
+                                            <div class="slidercontrol">
+                                                Interior<br />
+                                                <input id="conditionInterior" data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="14" data-slider-id='conditionInteriorSlider' />
+                                            </div>
+                                            <div class="slidertext" ng-bind="conditionInterior">
+
+                                            </div>
+                                        </div>
+                                        <div class="slider">
+                                            <div class="slidercontrol">
+                                                Exterior<br />
+                                                <input id="conditionExterior"  data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="14" data-slider-id='conditionExteriorSlider' />
+                                            </div>
+                                            <div class="slidertext" ng-bind="conditionExterior">
+
+                                            </div>
+                                        </div>
+                                        <div class="slider">
+                                            <div class="slidercontrol">
+                                                Engine<br />
+                                                <input id="conditionEngine"  data-slider-min="0" data-slider-max="4" data-slider-step="1" data-slider-value="14" data-slider-id='conditionEngineSlider' />
+                                            </div>
+                                            <div class="slidertext" ng-bind="conditionEngine">
+
+                                            </div>
+                                        </div>
+                                        <div class="slider" >
+                                            <div class="slidercontrol">
+                                                Tyres<br />
+                                                <input id="conditionTyres"  data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="14" data-slider-id='conditionTyresSlider' />
+                                            </div>
+                                            <div class="slidertext" ng-bind="conditionTyres">
+
+                                            </div>
+                                         </div>
+
+                                    </div>
+                                    <div id="continueButton" class="search-result-control">
                                         <input type="submit" wz-next value="CONTINUE" />
                                     </div>
-
-                                    <h5>Enter Condition</h5>
-                                    <p>Please tell us about the condition of this vehicle and list all the problems you are aware of.</p>
-
                                 </div>
                             </wz-step>
                             <wz-step title="Finish">
                                 <div class="wizardcontainer">
-                                    <div class="search-result-control">
-                                        <input type="submit" wz-next value="START SELLING" />
-                                    </div>
-                                    <h5>Type your details</h5>
-                                    <p>Please type your email and a password and click 'GO' to begin selling your car.</p>
 
+                                    <div class="controls">
+
+
+                                        <div class="datepickercontrol">
+                                            Sale Deadline<br />
+                                            <input type="text" class="date-picker form-control" data-date-start-view="decade" data-date-format="mm/dd/yy" data-date="02/01/99" value="02/01/99" id="deadline" name="deadline" placeholder="MM/DD/YY" />
+                                        </div>
+
+                                    </div>
+
+                                    <div id="startSellingButton" class="search-result-control">
+                                        <input type="submit" wz-next value="START SELLING" ng-click="startSelling()" />
+                                    </div>
                                 </div>
                             </wz-step>
                         </wizard>

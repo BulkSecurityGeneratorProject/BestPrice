@@ -2,12 +2,35 @@
 
 angular.module('bestpriceApp')
     .controller('MainController', function ($scope, Principal) {
+
         Principal.identity().then(function(account) {
             $scope.account = account;
             $scope.isAuthenticated = Principal.isAuthenticated;
-
-
         });
+
+        $scope.getLabelText = function(id,index) {
+            switch(id)
+            {
+                case "conditionInterior":
+                        return ["unacceptable", "poor","average","good","perfect"][index];
+                    break;
+                case "conditionExterior":
+                        return ["unacceptable", "poor","average","good","perfect",][index];
+                    break;
+                case "conditionEngine":
+                        return ["unacceptable", "poor","average","good","perfect",][index];
+                    break;
+                case "conditionTyres":
+                        return ["bald", "worn","good","new"][index];
+                    break;
+                default:
+                        return "";
+                    break;
+            }
+
+        };
+
+
         $scope.regValid = false;
         $scope.vrnResultAvailable = false;
         $scope.searching = false;
@@ -20,6 +43,7 @@ angular.module('bestpriceApp')
             $scope.vrnResultAvailable =  true;
             $scope.searching = false;
             $scope.$apply();
+            $scope.initConditionForm();
         };
         $scope.lastTimer = "";
 
@@ -46,13 +70,7 @@ angular.module('bestpriceApp')
                 $scope.vrnResultAvailable =false;
                 $scope.regValid = false;
             }
-
-
         };
-
-
-
-
 
         $scope.enterValidation = function(){
             return true;
@@ -61,11 +79,14 @@ angular.module('bestpriceApp')
         $scope.exitValidation = function(){
             return true;
         };
-//example using context object
+
+        //example using context object
         $scope.exitValidation = function(context){
             return context.firstName === "James";
         }
-//example using promises
+
+
+        //example using promises
         $scope.exitValidation = function(){
             var d = $q.defer()
             $timeout(function(){
@@ -73,4 +94,59 @@ angular.module('bestpriceApp')
             }, 2000);
             return d.promise;
         }
+
+        $scope.conditionChecks = [];
+        /* vehicle configuration */
+
+
+        $scope.conditionExterior= "";
+        $scope.conditionInterior= "";
+        $scope.conditionTyres= "";
+        $scope.conditionEngine= "";
+
+
+        $scope.initConditionForm = function()
+        {
+            // Without JQuery
+            if($scope.conditionChecks.length == 0) {
+                var exteriorConditionInput = new Slider('#conditionExterior', {
+                    formatter: function (value) {
+                        $scope.conditionExterior = $scope.getLabelText("conditionExterior", value);
+                        return $scope.getLabelText("conditionExterior", value);
+                    }
+                });
+
+                var interiorConditionInput = new Slider("#conditionInterior", {
+                    formatter: function (value) {
+                        $scope.conditionInterior = $scope.getLabelText("conditionInterior", value);
+                        return  $scope.getLabelText("conditionInterior", value);
+                    }
+                });
+
+                var tyresConditionInput = new Slider("#conditionTyres", {
+                    formatter: function (value) {
+                        $scope.conditionTyres = $scope.getLabelText("conditionTyres", value);
+                        return $scope.getLabelText("conditionTyres", value);
+                    }
+                });
+
+                var engineConditionInput = new Slider("#conditionEngine", {
+                    formatter: function (value) {
+                        $scope.conditionEngine = $scope.getLabelText("conditionEngine", value);
+                        return $scope.getLabelText("conditionEngine", value);
+                    }
+                });
+
+                $scope.conditionChecks = [exteriorConditionInput, interiorConditionInput, tyresConditionInput, engineConditionInput];
+            }
+        }
+        $scope.startSelling = function()
+        {
+            //TODO: NEED END POINT TO SAVE SALE RECORD
+
+
+        }
+
+
+
     });
